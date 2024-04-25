@@ -3,6 +3,6 @@
   "projectname": "LivingCommunity",
   "setting": {
     "compileHotReLoad": true,
-    "urlCheck": false
+    "urlCheck": true
   }
 }

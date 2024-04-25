@@ -1,2 +1,5 @@
 <!--index.wxml-->
 <van-button type="primary">八嘎</van-button>
+<view wx:for="{{announcement}}" wx:key="index">
+  <view>{{item.content}}</view>
+</view>
