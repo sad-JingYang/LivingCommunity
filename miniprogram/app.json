@@ -1,12 +1,9 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/mine/index"
   ],
-  "window": {
-    "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"
-  },
-  "style": "v2",
+  "window": {},
   "rendererOptions": {
     "skyline": {
       "defaultDisplayBlock": true,
@@ -14,6 +11,24 @@
       "sdkVersionBegin": "3.0.0",
       "sdkVersionEnd": "15.255.255"
     }
+  },
+  "tabBar": {
+    "color": "#cccc",
+    "selectedColor": "#41729d",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath": "./assets/home_active.png",
+        "iconPath": "./assets/home_inactive.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "消息",
+        "selectedIconPath": "./assets/mine_active.png",
+        "iconPath": "./assets/mine_inactive.png"
+      }
+    ]
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",

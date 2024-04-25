@@ -12,3 +12,12 @@ $RECYCLE.BIN/
 
 # Node.js
 node_modules/
+
+# 忽略开发过程中生成的构建产物
+dist/
+
+# vant-weapp
+vant-weapp/dist/
+vant-weapp/es/
+vant-weapp/lib/
+miniprogram/miniprogram_npm/
