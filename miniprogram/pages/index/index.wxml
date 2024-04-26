@@ -28,12 +28,13 @@
       <image src="../../assets/Bulletin.png" />
       <text>社区<text>公告</text></text>
     </view>
-    <view class="CommunityItem">
-      <view class="Title">中秋、国庆温馨提示</view>
-      <view class="Content">
-        尊敬的业主（住户）:您好！值此“中秋、国庆”双节来临之际，***物业全体员工向您致以节日问候，预祝大家节日快乐！工作顺利！！阖家幸福！！！与此同时，为营造节日期间优美、整洁、舒适、安全的社区环境，**
+    <!-- CommunityArticle -->
+    <view class="CommunityArticle">
+      <view class="CommunityItem" wx:for="{{announcement}}" wx:key="index">
+        <view class="Title">{{item.title}}</view>
+        <view class="Content">{{item.content}}</view>
+        <view class="CreatedTime">{{item.createdAt}}</view>
       </view>
-      <view class="CreatedTime">2022-09-29 14:16:57</view>
     </view>
   </view>
 </view>

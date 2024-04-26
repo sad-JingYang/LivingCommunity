@@ -17,6 +17,5 @@ Page({
       announcement: res
     })
     console.log(this.data.announcement);
-    
   }
 })
