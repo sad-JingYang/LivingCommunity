@@ -1,0 +1,6 @@
+<!--components/bulletin/index.wxml-->
+<view class="CommunityItem" data-index="{{item.id}}" wx:for="{{announcement}}" wx:key="index" bind:tap="JumpPage">
+  <view class="Title">{{item.title}}</view>
+  <view class="Content">{{item.content}}</view>
+  <view class="CreatedTime">{{item.createdAt}}</view>
+</view>

@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/mine/index"
+    "pages/mine/index",
+    "pages/BulletinDetails/index"
   ],
   "window": {},
   "rendererOptions": {
@@ -24,7 +25,7 @@
       },
       {
         "pagePath": "pages/mine/index",
-        "text": "消息",
+        "text": "我的",
         "selectedIconPath": "./assets/mine_active.png",
         "iconPath": "./assets/mine_inactive.png"
       }

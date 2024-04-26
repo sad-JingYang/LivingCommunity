@@ -3,6 +3,8 @@
   "miniprogramRoot": "miniprogram/",
   "compileType": "miniprogram",
   "setting": {
+    "ignoreDevUnusedFiles": false,
+    "ignoreUploadUnusedFiles": true,
     "packNpmManually": true,
     "packNpmRelationList": [
       {
@@ -24,7 +26,6 @@
     "minified": false,
     "enhance": false,
     "showShadowRootInWxmlPanel": false,
-    "ignoreUploadUnusedFiles": true,
     "compileHotReLoad": false,
     "skylineRenderEnable": true
   },

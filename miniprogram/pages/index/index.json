@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "van-button": "@vant/weapp/button/index"
+    "van-button": "@vant/weapp/button/index",
+    "bulletin": "../../components/bulletin/index"
   },
   "navigationBarTitleText": "享+社区",
   "navigationBarBackgroundColor": "#d2dde8",

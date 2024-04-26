@@ -30,11 +30,7 @@
     </view>
     <!-- CommunityArticle -->
     <view class="CommunityArticle">
-      <view class="CommunityItem" wx:for="{{announcement}}" wx:key="index">
-        <view class="Title">{{item.title}}</view>
-        <view class="Content">{{item.content}}</view>
-        <view class="CreatedTime">{{item.createdAt}}</view>
-      </view>
+      <bulletin announcement="{{announcement}}"/>
     </view>
   </view>
 </view>

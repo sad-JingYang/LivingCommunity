@@ -1,0 +1,25 @@
+/* pages/bulletin/index.wxss */
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px 15px 15px;
+  box-sizing: border-box;
+
+  .title {
+    font-size: 18px;
+  }
+
+  .name_time {
+    display: flex;
+    justify-content: space-between;
+    color: #b9b9b9;
+    font-size: 13px;
+    padding-top: 5px;
+  }
+
+  .content {
+    padding: 15px 0;
+    color: rgb(75, 75, 75);
+  }
+}
