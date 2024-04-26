@@ -1,3 +1,5 @@
+import { FetchCode, FetchLogin } from "../../api/login";
+
 // pages/perfect/index.ts
 Page({
   data: {
@@ -10,7 +12,17 @@ Page({
   onLoad() { },
   onReady() { },
   // 获取验证码
-
+  async GetCode(): Promise<void> {
+    const { data: res } = await FetchCode(this.data.mobile);
+    console.log(res.code);
+    // 给用户提示
+    wx.showToast({
+      title: res.code,
+      icon: 'none',    //如果要纯文本，不要icon，将值设为'none'
+      duration: 2000    //持续时间为 2秒
+    });
+    this.DownTimes();
+  },
   // 倒计时
   DownTimes() {
     if (!this.data.time) {
@@ -37,5 +49,36 @@ Page({
         time: intervalId,
       });
     }
+  },
+  // 赋值phone
+  modelphone(ev: Object): void {
+    this.setData({
+      mobile: ev.detail.value
+    })
+  },
+  // 赋值code
+  modelcode(ev: Object): void {
+    this.setData({
+      code: ev.detail.value
+    })
+  },
+  // 登录
+  async Login(): Promise<void> {
+    const { data: res } = await FetchLogin({
+      mobile: this.data.mobile,
+      code: this.data.code
+    });
+    wx.setStorage({
+      key: "token",
+      data: res
+    })
+    wx.showToast({
+      title: '登录成功！',
+      icon: 'none',
+      duration: 2000
+    })
+    wx.navigateBack({
+      delta: 1
+    });
   }
 })

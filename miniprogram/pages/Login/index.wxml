@@ -6,17 +6,17 @@
 <!-- FORM表单 -->
 <view class="Form">
   <view class="phone">
-    <input type="text" placeholder="请输入手机号码" model:value="{{mobile}}" />
-    <text bind:tap="DownTimes" class="{{time?'hideCode':''}}">{{ title }}</text>
+    <input type="text" placeholder="请输入手机号码" value="{{mobile}}" bind:input="modelphone" />
+    <text bind:tap="GetCode" class="{{time?'hideCode':''}}">{{ title }}</text>
   </view>
   <view class="code">
-    <input type="text" placeholder="请输入6位验证码" />
+    <input type="text" value="{{code}}" bind:input="modelcode" placeholder="请输入6位验证码" />
   </view>
 </view>
 <!-- Tips -->
 <view class="Tip">未注册手机号经验证后将自动注册</view>
 <!-- Fixed -->
-<view class="FixedBottom">
+<view class="FixedBottom" bind:tap="Login">
   <van-icon name="down" class="down_Icon" />
   <view>登录</view>
 </view>
