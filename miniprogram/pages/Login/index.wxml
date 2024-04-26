@@ -1,0 +1,22 @@
+<!--pages/Login/index.wxml-->
+<view class="Head">
+  <view class="Title">登录</view>
+  <view class="desc">加入享+，让生活更轻松</view>
+</view>
+<!-- FORM表单 -->
+<view class="Form">
+  <view class="phone">
+    <input type="text" placeholder="请输入手机号码" model:value="{{mobile}}" />
+    <text bind:tap="DownTimes" class="{{time?'hideCode':''}}">{{ title }}</text>
+  </view>
+  <view class="code">
+    <input type="text" placeholder="请输入6位验证码" />
+  </view>
+</view>
+<!-- Tips -->
+<view class="Tip">未注册手机号经验证后将自动注册</view>
+<!-- Fixed -->
+<view class="FixedBottom">
+  <van-icon name="down" class="down_Icon" />
+  <view>登录</view>
+</view>
