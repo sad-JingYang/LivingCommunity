@@ -10,10 +10,10 @@ Component({
   methods: {
     // 跳转页面
     JumpPage(event) {
-      console.log(event);
-      
+      let Id = event.currentTarget.dataset.index;
+
       wx.navigateTo({
-        url: '/pages/BulletinDetails/index'
+        url: `/pages/BulletinDetails/index?Id=${Id}`
       })
     }
   }

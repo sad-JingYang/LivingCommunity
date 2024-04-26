@@ -21,5 +21,9 @@ page {
   .content {
     padding: 15px 0;
     color: rgb(75, 75, 75);
+
+    rich-text {
+      line-height: 30px;
+    }
   }
 }

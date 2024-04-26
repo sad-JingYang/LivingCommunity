@@ -11,3 +11,17 @@ export interface ApiResponse {
   message: string;
   data: DataItem[];
 }
+
+export interface NotificationData {
+  id: string;
+  content: string;
+  title: string;
+  createdAt: string;
+  creatorName: string;
+}
+
+export interface NotificationResponse {
+  code: number;
+  message: string;
+  data: NotificationData;
+}

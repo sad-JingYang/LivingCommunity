@@ -30,7 +30,7 @@
     </view>
     <!-- CommunityArticle -->
     <view class="CommunityArticle">
-      <bulletin announcement="{{announcement}}"/>
+      <bulletin announcement="{{announcement}}" />
     </view>
   </view>
 </view>
