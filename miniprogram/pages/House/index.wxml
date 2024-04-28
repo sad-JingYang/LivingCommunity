@@ -5,18 +5,20 @@
 
 <view class="house-list">
   <view class="house-Info">房屋信息</view>
-  <view class="house-card" wx:for="{{3}}" wx:key="index">
+  <view class="house-card" wx:for="{{HouseList}}" wx:key="index">
     <view class="card-item">
-      <view class="point">先锋社区</view>
-      <view class="wanrn">审核成功</view>
+      <view class="point">{{item.point}}</view>
+      <view class="success" wx:if="{{item.status===2}}">审核成功</view>
+      <view class="wanrn" wx:if="{{item.status===3}}">审核失败</view>
+      <view class="primary" wx:if="{{item.status===1}}">正在审核</view>
     </view>
     <view class="room-num">
       <text class="room">房间号</text>
-      <text class="num">7号楼1502</text>
+      <text class="num">{{item.building}}{{item.room}}</text>
     </view>
     <view class="owner">
       <text class="owner-owner">业主</text>
-      <text class="name">Linda</text>
+      <text class="name">{{item.name}}</text>
     </view>
   </view>
   <view class="AddHouse">
