@@ -1,0 +1,16 @@
+<!--pages/perfect/perfect.wxml-->
+<view class="bigbox">
+  <view class="ncname">
+    <view>头像</view>
+    <view>
+      <button class='avatar' type="default" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+        <image src="../../assets/MyHouse.png" />
+      </button>
+      <van-icon name="arrow" />
+    </view>
+  </view>
+  <view class="ncname">
+    <view>昵称</view>
+    <input class='nickNameInput' type="nickname" value="12121" bindblur="getNickName" />
+  </view>
+</view>

@@ -9,8 +9,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/Login/index",
-          "pathName": "pages/Login/index",
+          "name": "pages/perfect/perfect",
+          "pathName": "pages/perfect/perfect",
           "query": "",
           "launchMode": "default",
           "scene": null

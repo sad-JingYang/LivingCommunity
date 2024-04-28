@@ -24,11 +24,11 @@ Page({
     let Url = url.currentTarget.dataset.url;
     if (Url === 'perfect') {
       wx.getStorage({
-        key: 'UserInfo',
+        key: 'token',
         success(res) {
           console.log(res);
           wx.navigateTo({
-            url: '/pages/Login/index'
+            url: '/pages/perfect/perfect'
           })
         },
         fail(err) {

@@ -3,7 +3,8 @@
     "pages/home/index",
     "pages/mine/index",
     "pages/BulletinDetails/index",
-    "pages/Login/index"
+    "pages/Login/index",
+    "pages/perfect/perfect"
   ],
   "window": {},
   "rendererOptions": {
