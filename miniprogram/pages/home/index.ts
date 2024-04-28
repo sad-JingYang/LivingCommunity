@@ -16,5 +16,14 @@ Page({
     this.setData({
       announcement: res
     })
+  },
+  // JumpPage
+  JumpPage(name: Object): void {
+    const UrlName = name.currentTarget.dataset.name;
+    if (UrlName === 'house') {
+      wx.navigateTo({
+        url: '/pages/House/index'
+      })
+    }
   }
 })

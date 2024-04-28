@@ -3,7 +3,7 @@
   <!-- Menus -->
   <view class="menus-isolation">
     <view class="menus-box">
-      <view class="menus-item">
+      <view class="menus-item" bind:tap="JumpPage" data-name="house">
         <image src="../../assets/MyHouse.png" />
         <text>我的房屋</text>
       </view>

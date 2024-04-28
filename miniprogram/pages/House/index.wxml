@@ -1,0 +1,26 @@
+<!--pages/House/index.wxml-->
+<view class="Empty" hidden="true">
+  <van-empty description="您还没有认证房屋，" />
+</view>
+
+<view class="house-list">
+  <view class="house-Info">房屋信息</view>
+  <view class="house-card" wx:for="{{3}}" wx:key="index">
+    <view class="card-item">
+      <view class="point">先锋社区</view>
+      <view class="wanrn">审核成功</view>
+    </view>
+    <view class="room-num">
+      <text class="room">房间号</text>
+      <text class="num">7号楼1502</text>
+    </view>
+    <view class="owner">
+      <text class="owner-owner">业主</text>
+      <text class="name">Linda</text>
+    </view>
+  </view>
+  <view class="AddHouse">
+    <van-icon name="plus" class="plusIcon" />
+    <view>添加新房屋</view>
+  </view>
+</view>

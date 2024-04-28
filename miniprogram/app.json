@@ -4,7 +4,8 @@
     "pages/mine/index",
     "pages/BulletinDetails/index",
     "pages/Login/index",
-    "pages/perfect/perfect"
+    "pages/perfect/perfect",
+    "pages/House/index"
   ],
   "window": {},
   "rendererOptions": {

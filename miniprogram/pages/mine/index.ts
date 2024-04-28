@@ -18,7 +18,9 @@ Page({
       })
       return;
     }
-    this.GetInfo();
+  },
+  onShow() {
+    this.GetInfo()
   },
   JumpPage(url: Object) {
     let Url = url.currentTarget.dataset.url;
