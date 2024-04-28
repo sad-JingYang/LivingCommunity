@@ -5,7 +5,8 @@
     "pages/BulletinDetails/index",
     "pages/Login/index",
     "pages/perfect/perfect",
-    "pages/House/index"
+    "pages/House/index",
+    "pages/HouseInfo/index"
   ],
   "window": {},
   "rendererOptions": {

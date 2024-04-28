@@ -5,7 +5,7 @@
 
 <view class="house-list">
   <view class="house-Info">房屋信息</view>
-  <view class="house-card" wx:for="{{HouseList}}" wx:key="index">
+  <view class="house-card" wx:for="{{HouseList}}" wx:key="index" bind:tap="JumpPage" data-HouseId="{{item.id}}">
     <view class="card-item">
       <view class="point">{{item.point}}</view>
       <view class="success" wx:if="{{item.status===2}}">审核成功</view>

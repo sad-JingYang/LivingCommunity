@@ -1,0 +1,32 @@
+<!--pages/RoomInfo/index.wxml-->
+<view class="HouseInfo">房屋信息</view>
+<view class="point-review">
+  <view>清水湾</view>
+  <view class="wanrn">审核失败</view>
+</view>
+<view class="owner">
+  <view class="owner-info">业主信息</view>
+  <view class="PersonalInfo">
+    <view class="gap">
+      <view>房间号</view>
+      <view class="last">1502</view>
+    </view>
+    <view class="gap">
+      <view>业主</view>
+      <view class="last">理想三旬</view>
+    </view>
+    <view class="gap">
+      <view>手机号</view>
+      <view class="last">18790196513</view>
+    </view>
+  </view>
+</view>
+<view class="CardPhoto">
+  <view class="tips">本人身份证照片</view>
+  <image src="../../assets/nan.jpg" class="just" />
+  <image src="../../assets/nan.jpg" class="opposite" />
+</view>
+<view class="EditHouseInfo">
+  <van-icon name="edit"  class="Icon"/>
+  <view>修改房屋信息</view>
+</view>

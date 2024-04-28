@@ -82,12 +82,14 @@ Page({
     wx.setStorage({
       key: "token",
       data: res.data
-    })
-    wx.navigateBack({ delta: 1 });
+    });
+    wx.reLaunch({
+      url: '/pages/home/index'
+    });
     wx.showToast({
       title: '登录成功！',
       icon: 'none',
       duration: 2000
-    })
+    });
   }
 })

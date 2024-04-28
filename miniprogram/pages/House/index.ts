@@ -18,5 +18,12 @@ Page({
     this.setData({
       HouseList: res.data
     })
+  },
+  // JumpPage
+  JumpPage(Id: Object): void {
+    const HouseId = Id.currentTarget.dataset.houseid;
+    wx.navigateTo({
+      url: `/pages/HouseInfo/index?Id=${HouseId}`
+    })
   }
 })

@@ -1,0 +1,97 @@
+/* pages/RoomInfo/index.wxss */
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 15px 15px;
+
+  .HouseInfo {
+    font-size: 13px;
+    color: #cccccc;
+  }
+
+  .point-review {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+
+    .wanrn {
+      background-color: rgb(252, 242, 237);
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 13px;
+      color: red;
+    }
+
+    .success {
+      background-color: rgb(235, 248, 240);
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 13px;
+      color: rgb(39, 174, 96);
+    }
+
+    .primary {
+      background-color: rgb(229, 240, 251);
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 13px;
+      color: rgb(45, 156, 219);
+    }
+  }
+
+  .owner {
+    .owner-info {
+      color: #cccccc;
+      font-size: 13px;
+      padding: 15px 0;
+    }
+
+    .PersonalInfo {
+      .gap {
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-between;
+
+        .last {
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  .CardPhoto {
+    padding: 15px 0;
+
+    .tips {
+      padding: 10px 0;
+    }
+
+    image {
+      width: 100%;
+      padding: 5px 0;
+      border-radius: 15px;
+    }
+  }
+
+  .EditHouseInfo {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transform: translateX(0%);
+    text-align: center;
+
+    .Icon {
+      font-size: 30px;
+      color: rgb(85, 147, 183);
+      padding-bottom: 5px;
+    }
+  }
+}
