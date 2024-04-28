@@ -6,7 +6,8 @@
     "pages/Login/index",
     "pages/perfect/perfect",
     "pages/House/index",
-    "pages/HouseInfo/index"
+    "pages/HouseInfo/index",
+    "pages/Visitor/index"
   ],
   "window": {},
   "rendererOptions": {

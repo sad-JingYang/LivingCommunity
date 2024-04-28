@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/Visitor/index",
+          "pathName": "pages/Visitor/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/HouseInfo/index",
           "pathName": "pages/HouseInfo/index",
           "query": "Id=7021068090867712",

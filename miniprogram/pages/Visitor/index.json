@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-popup": "@vant/weapp/popup/index"
+  },
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "填写访客信息",
+  "navigationBarBackgroundColor": "#fff"
+}

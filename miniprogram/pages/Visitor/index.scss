@@ -1,0 +1,50 @@
+/* pages/Visitor/index.wxss */
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-sizing: border-box;
+
+  .HouseInfo {
+    font-size: 13px;
+    color: rgb(151, 151, 151);
+  }
+
+  .Select {
+    padding: 15px 0 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(207, 195, 197);
+  }
+
+  .VisitorInfo {
+    font-size: 15px;
+    color: #cccccc;
+    padding-bottom: 15px;
+  }
+
+  .VisitorForm {
+
+    .grap {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input {
+        padding-right: 70px;
+      }
+
+      .van-radio-group {
+        padding-right: 120px;
+      }
+
+      .pr {
+        padding-right: 80px;
+        color: #cccccc;
+      }
+    }
+  }
+}

@@ -12,7 +12,7 @@
         <text>在线报修</text>
       </view>
       <view class="menus-item">
-        <image src="../../assets/VisitorInvite.png" />
+        <image src="../../assets/VisitorInvite.png" bind:tap="JumpPage" data-name="visitor"/>
         <text>访客邀请</text>
       </view>
     </view>

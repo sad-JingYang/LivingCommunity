@@ -1,0 +1,37 @@
+<!--pages/Visitor/index.wxml-->
+<text class="HouseInfo">房屋信息</text>
+<view class="Select" bind:tap="onSelect">
+  <view>请选择房屋信息</view>
+  <van-icon name="arrow"></van-icon>
+</view>
+<text class="VisitorInfo">访客信息</text>
+<view class="VisitorForm">
+  <view class="grap">
+    <view>姓名</view>
+    <input type="text" placeholder="请输入访客真是姓名" />
+  </view>
+  <view class="grap">
+    <view>性别</view>
+    <van-radio-group value="{{ radio }}" bind:change="onChange" direction="horizontal">
+      <van-radio name="1">男</van-radio>
+      <van-radio name="2">女</van-radio>
+    </van-radio-group>
+  </view>
+  <view class="grap">
+    <view>手机号</view>
+    <input type="text" placeholder="请输入访客电话号码" />
+  </view>
+  <view class="grap" bind:tap="showPopup">
+    <view>访问日期</view>
+    <view class="pr">请选择预约日期</view>
+    <van-icon name="arrow" />
+  </view>
+</view>
+<!-- sheet -->
+<van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" />
+<!-- popup -->
+<van-popup show="{{ popupShow }}" round position="bottom" custom-style="height: 50%;" bind:close="ClosePopup">
+  骗你的，其实那年我没去职高，我去的是伯克利;
+  骗你的，其实那年我没去职高，我去的是伯克利;
+  骗你的，其实那年我没去职高，我去的是伯克利;
+</van-popup>

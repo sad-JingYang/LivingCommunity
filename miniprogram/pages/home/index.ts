@@ -24,6 +24,10 @@ Page({
       wx.navigateTo({
         url: '/pages/House/index'
       })
+    } else if (UrlName === 'visitor') {
+      wx.navigateTo({
+        url: '/pages/Visitor/index'
+      })
     }
   }
 })
