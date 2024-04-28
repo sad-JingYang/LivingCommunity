@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/home/index",
     "pages/mine/index",
     "pages/BulletinDetails/index",
     "pages/Login/index"
@@ -19,7 +19,7 @@
     "selectedColor": "#41729d",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/home/index",
         "text": "首页",
         "selectedIconPath": "./assets/home_active.png",
         "iconPath": "./assets/home_inactive.png"

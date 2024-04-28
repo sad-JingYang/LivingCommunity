@@ -1,7 +1,25 @@
+import { UserData } from "typings/mine";
+import { FetchMineInfo } from "../../api/mine";
+
 // pages/mine/index.ts
 Page({
-  data: {},
-  onLoad() { },
+  data: {
+    UserInfo: {
+      avatar: '../../assets/house.png',
+      nickName: '浪浪山',
+      id: ''
+    } as UserData
+  },
+  onLoad() {
+    const token = wx.getStorageSync('token');
+    if (!token) {
+      wx.navigateTo({
+        url: '/pages/Login/index'
+      })
+      return;
+    }
+    this.GetInfo();
+  },
   JumpPage(url: Object) {
     let Url = url.currentTarget.dataset.url;
     if (Url === 'perfect') {
@@ -21,5 +39,13 @@ Page({
         }
       })
     }
+  },
+  async GetInfo(): Promise<void> {
+    const { data: res } = await FetchMineInfo();
+    if (!res) return;
+    if (!res.avatar && !res.nickName) return;
+    this.setData({
+      UserInfo: res
+    })
   }
 })

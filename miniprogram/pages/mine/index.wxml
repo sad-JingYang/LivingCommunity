@@ -3,8 +3,8 @@
 <view class="mine-head">
   <view class="mine-head-item">
     <view class="Item-left">
-      <image src="../../assets/MyHouse.png" />
-      <text>浪浪山</text>
+      <image src="{{UserInfo.avatar}}" />
+      <text>{{UserInfo.nickName}}</text>
     </view>
     <view class="Item-right" data-url="perfect" bind:tap="JumpPage">
       <text>去完善信息</text>

@@ -6,6 +6,7 @@ Page({
     num: 10,
     time: null as number | null,
     title: '获取验证码',
+    mycode: '',
     mobile: '18790196513',
     code: ''
   },
@@ -14,13 +15,15 @@ Page({
   // 获取验证码
   async GetCode(): Promise<void> {
     const { data: res } = await FetchCode(this.data.mobile);
-    console.log(res.code);
     // 给用户提示
     wx.showToast({
       title: res.code,
       icon: 'none',    //如果要纯文本，不要icon，将值设为'none'
       duration: 2000    //持续时间为 2秒
     });
+    this.setData({
+      mycode: res.code
+    })
     this.DownTimes();
   },
   // 倒计时
@@ -64,21 +67,27 @@ Page({
   },
   // 登录
   async Login(): Promise<void> {
-    const { data: res } = await FetchLogin({
+    if (this.data.code !== this.data.mycode) {
+      wx.showToast({
+        title: '登录失败！',
+        icon: 'none',
+        duration: 2000
+      })
+      return;
+    };
+    const res = await FetchLogin({
       mobile: this.data.mobile,
       code: this.data.code
     });
     wx.setStorage({
       key: "token",
-      data: res
+      data: res.data
     })
+    wx.navigateBack({ delta: 1 });
     wx.showToast({
       title: '登录成功！',
       icon: 'none',
       duration: 2000
     })
-    wx.navigateBack({
-      delta: 1
-    });
   }
 })
