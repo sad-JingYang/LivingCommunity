@@ -26,6 +26,11 @@
     <view class="pr">请选择预约日期</view>
     <van-icon name="arrow" />
   </view>
+
+  <view class="confirm">
+    <van-icon name="passed"  class="Icon"/>
+    <view>确认</view>
+  </view>
 </view>
 <!-- sheet -->
 <van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" />

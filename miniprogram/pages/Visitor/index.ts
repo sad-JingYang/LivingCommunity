@@ -27,13 +27,13 @@ Page({
   onSelect() {
     this.setData({ show: true });
   },
-  onChange(event) {
+  onChange(event: any) {
     this.setData({
       radio: event.detail,
     });
   },
   // POPUP
-  showPopup() {    
+  showPopup() {
     this.setData({ popupShow: true });
   },
   ClosePopup() {
