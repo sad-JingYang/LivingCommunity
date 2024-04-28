@@ -23,12 +23,14 @@ Page({
   JumpPage(url: Object) {
     let Url = url.currentTarget.dataset.url;
     if (Url === 'perfect') {
+      const avatar = this.data.UserInfo.avatar;
+      const nickName = this.data.UserInfo.nickName;
       wx.getStorage({
         key: 'token',
         success(res) {
           console.log(res);
           wx.navigateTo({
-            url: '/pages/perfect/perfect'
+            url: `/pages/perfect/perfect?avatar=${avatar}&nickName=${nickName}`
           })
         },
         fail(err) {

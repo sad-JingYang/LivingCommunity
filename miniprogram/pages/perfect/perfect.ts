@@ -1,66 +1,48 @@
+import { FetchPutInfo } from "../../api/EditInfo";
+
 // pages/perfect/perfect.ts
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    avatar: '',
+    nickName: ''
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad() {
-
+  handleNickName(eve: Object) {
+    this.setData({
+      nickName: eve.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  async EditInfo() {
+    const { data: res } = await FetchPutInfo({
+      nickName: this.data.nickName,
+      avatar: this.data.avatar
+    });
+    console.log(res);
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
+  onChooseavatar() {
+    wx.chooseMessageFile({
+      count: 1,
+      type: 'file',
+      success: (res) => {
+        // 选择成功
+        const tempFiles = res.tempFiles;
+        // 获取选择的文件路径
+        const filePath = tempFiles[0].path;
+        // 将文件路径赋值给 data 中的 avatar
+        this.setData({
+          avatar: filePath
+        });
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
+  onLoad(options) {
+    this.setData({
+      avatar: options.avatar
+    })
+    this.setData({
+      nickName: options.nickName
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
   onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+    this.EditInfo();
   }
 })
