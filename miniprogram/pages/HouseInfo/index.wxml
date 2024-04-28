@@ -1,30 +1,32 @@
 <!--pages/RoomInfo/index.wxml-->
 <view class="HouseInfo">房屋信息</view>
 <view class="point-review">
-  <view>清水湾</view>
-  <view class="wanrn">审核失败</view>
+  <view>{{HouseInfo.point}}</view>
+  <view class="wanrn" wx:if="{{HouseInfo.status===3}}">审核失败</view>
+  <view class="success" wx:if="{{HouseInfo.status===2}}">审核成功</view>
+  <view class="primary" wx:if="{{HouseInfo.status===1}}">正在审核</view>
 </view>
 <view class="owner">
   <view class="owner-info">业主信息</view>
   <view class="PersonalInfo">
     <view class="gap">
       <view>房间号</view>
-      <view class="last">1502</view>
+      <view class="last">{{HouseInfo.room}}</view>
     </view>
     <view class="gap">
       <view>业主</view>
-      <view class="last">理想三旬</view>
+      <view class="last">{{HouseInfo.name}}</view>
     </view>
     <view class="gap">
       <view>手机号</view>
-      <view class="last">18790196513</view>
+      <view class="last">{{HouseInfo.mobile}}</view>
     </view>
   </view>
 </view>
 <view class="CardPhoto">
   <view class="tips">本人身份证照片</view>
-  <image src="../../assets/nan.jpg" class="just" />
-  <image src="../../assets/nan.jpg" class="opposite" />
+  <image src="{{HouseInfo.idcardFrontUrl}}" class="just" />
+  <image src="{{HouseInfo.idcardBackUrl}}" class="opposite" />
 </view>
 <view class="EditHouseInfo">
   <van-icon name="edit"  class="Icon"/>

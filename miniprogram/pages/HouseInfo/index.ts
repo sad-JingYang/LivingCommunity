@@ -1,10 +1,26 @@
+import { UserDataDetails } from "../../../typings/HouseInfo";
+import { FetchHouseInfo } from "../../api/HouseInfo";
+
 // pages/RoomInfo/index.ts
 Page({
-  data: {},
+  data: {
+    InfoId: '',
+    HouseInfo: {} as UserDataDetails
+  },
   onLoad(options) {
-    console.log(options.Id);
+    this.setData({
+      InfoId: options.Id
+    })
   },
   onReady() { },
-  onShow() { },
-  onHide() { }
+  onShow() {
+    this.GetInfo()
+  },
+  onHide() { },
+  async GetInfo(): Promise<void> {
+    const res = await FetchHouseInfo(this.data.InfoId);
+    this.setData({
+      HouseInfo: res.data
+    })
+  }
 })
