@@ -9,7 +9,7 @@
 </view>
 <text class="nearby">附近社区</text>
 <view class="Community">
-  <view class="Item" wx:for="{{points}}" wx:key="index" bind:tap="JumpPage">
+  <view class="Item" wx:for="{{points}}" wx:key="index" bind:tap="JumpPage" data-title="{{item.title}}">
     <view>{{item.title}}</view>
     <van-icon name="arrow" color="gray" />
   </view>

@@ -69,7 +69,11 @@ Page({
     })
   },
   // JumpPage
-  JumpPage(): void {
-    wx.navigateTo({url:'/pages/community/building/building'})
+  JumpPage(Item: any): void {
+    const title = Item.target.dataset.title;
+    
+    wx.navigateTo({
+      url: `/pages/community/building/building?title=${title}`
+    })
   }
 })

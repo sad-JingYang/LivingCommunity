@@ -22,22 +22,22 @@
     <input type="text" value="{{mobile}}" bindinput="MobileChange" placeholder="请输入您的手机号" />
   </view>
 </view>
-<view class="portrait" bind:tap="PostPortrait">
-  <view>
+<view class="portrait" bind:tap="PostPortrait" mark:type="idcardFrontUrl">
+  <view wx:if="{{idcardFrontUrl==''}}">
     <van-icon name="plus" />
     <text>上传人像面照片</text>
   </view>
-  <image src="" mode="" hidden="false" />
+  <image src="{{ idcardFrontUrl }}" wx:else />
 </view>
-<view class="NationalEmblem">
-  <view>
+<view class="NationalEmblem" bind:tap="PostPortrait" mark:type="idcardBackUrl">
+  <view wx:if="{{ idcardBackUrl=='' }}">
     <van-icon name="plus" />
     <text>上传国徽面照片</text>
   </view>
-  <image src="" mode="" hidden="false" />
+  <image src="{{ idcardBackUrl }}" wx:else />
 </view>
 <view class="grap"></view>
-<view class="confirm">
-  <van-icon name="success"/>
+<view class="confirm" bind:tap="PostNewRoom">
+  <van-icon name="success" />
   <view>提交审核</view>
 </view>
