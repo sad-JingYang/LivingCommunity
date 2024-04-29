@@ -9,8 +9,8 @@
 </view>
 <text class="nearby">附近社区</text>
 <view class="Community">
-  <view class="Item" wx:for="{{5}}" wx:key="index">
-    <view>弥陀寺路1号院</view>
-    <van-icon name="arrow" color="gray"/>
+  <view class="Item" wx:for="{{points}}" wx:key="index" bind:tap="JumpPage">
+    <view>{{item.title}}</view>
+    <van-icon name="arrow" color="gray" />
   </view>
 </view>

@@ -1,0 +1,7 @@
+<!--pages/community/building/building.wxml-->
+<view class="building">
+  <view class="buildingItem" wx:for="{{3}}" wx:key="index" bind:tap="JumpPage">
+    <text>翻斗花园小区 {{item+1}}栋</text>
+    <van-icon name="arrow" />
+  </view>
+</view>

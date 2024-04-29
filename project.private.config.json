@@ -9,15 +9,22 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/NewCommunity/index",
-          "pathName": "pages/NewCommunity/index",
+          "name": "pages/community/NewRoom/NewRoom",
+          "pathName": "pages/community/NewRoom/NewRoom",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
-          "name": "pages/House/index",
-          "pathName": "pages/House/index",
+          "name": "pages/community/room/room",
+          "pathName": "pages/community/room/room",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/community/building/building",
+          "pathName": "pages/community/building/building",
           "query": "",
           "launchMode": "default",
           "scene": null

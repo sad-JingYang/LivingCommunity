@@ -1,0 +1,43 @@
+<!--pages/community/NewRoom/NewRoom.wxml-->
+<text class="HouseInfo">房屋信息</text>
+<view class="Select" bind:tap="onSelect">
+  <view style="color: black;">{{SelectedHouse}}</view>
+  <van-icon name="arrow" />
+</view>
+<text class="VisitorInfo">访客信息</text>
+<view class="VisitorForm">
+  <view class="grap">
+    <view>姓名</view>
+    <input type="text" value="{{visitorName}}" placeholder="请填写您的真实姓名" bindinput="NameChange" />
+  </view>
+  <view class="grap">
+    <view>性别</view>
+    <van-radio-group value="{{ radio }}" bind:change="onChange" direction="horizontal">
+      <van-radio name="1">男</van-radio>
+      <van-radio name="0">女</van-radio>
+    </van-radio-group>
+  </view>
+  <view class="grap">
+    <view>手机号</view>
+    <input type="text" value="{{mobile}}" bindinput="MobileChange" placeholder="请输入您的手机号" />
+  </view>
+</view>
+<view class="portrait" bind:tap="PostPortrait">
+  <view>
+    <van-icon name="plus" />
+    <text>上传人像面照片</text>
+  </view>
+  <image src="" mode="" hidden="false" />
+</view>
+<view class="NationalEmblem">
+  <view>
+    <van-icon name="plus" />
+    <text>上传国徽面照片</text>
+  </view>
+  <image src="" mode="" hidden="false" />
+</view>
+<view class="grap"></view>
+<view class="confirm">
+  <van-icon name="success"/>
+  <view>提交审核</view>
+</view>
