@@ -1,0 +1,41 @@
+/* pages/NewCommunity/index.wxss */
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-sizing: border-box;
+
+  .CurrentLocation {
+    font-size: 13px;
+    color: rgb(151, 151, 151);
+  }
+
+  .re-locate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+
+    .guide {
+      padding: 15px 0 15px 0;
+      color: rgb(85, 145, 175);
+    }
+  }
+
+  .nearby {
+    padding-bottom: 15px;
+    color: rgb(151, 151, 151);
+    font-size: 13px;
+  }
+
+  .Community {
+
+    .Item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 30px;
+    }
+  }
+}

@@ -21,8 +21,8 @@
       <text class="name">{{item.name}}</text>
     </view>
   </view>
-  <view class="AddHouse">
+  <navigator url="/pages/NewCommunity/index" class="AddHouse">
     <van-icon name="plus" class="plusIcon" />
     <view>添加新房屋</view>
-  </view>
+  </navigator>
 </view>
