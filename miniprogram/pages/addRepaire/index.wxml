@@ -1,0 +1,56 @@
+<scroll-view class="scrollContent" scroll-y="true" show-scrollbar="false" enhanced="true">
+  <view class="header">
+    <text class="headerTip">报修房屋</text>
+    <view bind:tap="clickHouses">
+      <text>{{houses}}</text>
+      <van-icon name="arrow" />
+    </view>
+  </view>
+  <view class="titles">报修信息</view>
+  <view class="content">
+    <view class="tab item" catch:tap="clickRepair">
+      <view class="name">维修项目</view>
+      <view class="text">
+        <text wx:if="{{ repairItem === '' }}">请选择维修项目</text>
+        <text class="clr" wx:if="{{ repairItem !== '' }}">{{ repairItem }}</text>
+      </view>
+      <van-icon class="iconfont icon-jinru" name="arrow" />
+    </view>
+    <view class="tab item">
+      <view class="name">手机号码</view>
+      <view class="text">
+        <input type="text" placeholder="请输入联系电话号码" placeholder-style="color:#C3C3C5" bind:input="setPhone" value="{{ repairBody.mobile }}" />
+      </view>
+    </view>
+    <view class="tab item" catch:tap="clickData">
+      <view class="name">预约日期</view>
+      <view class="text">
+        <text wx:if="{{ repairBody.appointment === '' }}">请选择上门维修日期</text>
+        <text class="clr" wx:if="{{ repairBody.appointment !== '' }}">{{ repairBody.appointment }}</text>
+      </view>
+      <view class="iconfont icon-jinru"></view>
+    </view>
+    <view class="tab">
+      <view class="name">问题描述</view>
+      <textarea value="{{ repairBody.description }}" bindinput="setDescription" placeholder="请填写报修内容，工作人员将快速帮您解决问题。" placeholder-style="color:#C3C3C5" />
+    </view>
+    <view class=" files">
+      <view class="name">问题附件</view>
+      <van-uploader file-list="{{ repairBody.attachment }}" max-count="6" bind:after-read="afterRead" bind:delete="deleteFile" />
+    </view>
+  </view>
+  <view bind:tap="judge" class="Confirm">
+    <van-icon name="success" />
+    <text>提交报修</text>
+  </view>
+</scroll-view>
+<van-popup class=" houses" show="{{ popup }}" round position="bottom" bind:close="popupClose">
+  <view class="title">{{popupTitle}}</view>
+  <view class="options">
+    <view class="tab" hover-class="bgc" wx:for="{{ popupList }}" wx:key="id" catch:tap="housesTap" data-id="{{ item.id }}" data-name="{{ item.name }}">{{ item.name }}</view>
+  </view>
+  <view class="cancel" catch:tap="popupClose">取消</view>
+</van-popup>
+<van-popup class="newData" show="{{ newData }}" round position="bottom" bind:close="newDataClose">
+  <van-datetime-picker type="date" value="{{ currentDate }}" bind:confirm="onConfirm" min-date="{{ minDate }}" formatter="{{ formatter }}" bind:cancel="newDataClose" />
+</van-popup>

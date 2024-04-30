@@ -51,5 +51,18 @@ Page({
     this.setData({
       UserInfo: res
     })
+  },
+  // 我的房屋 - 我的报修 - 访客记录
+  GoPage(bt: any) {
+    const Url = bt.currentTarget.dataset.bt;
+    if (Url === 'MyHouse') {
+      wx.navigateTo({
+        url: `/pages/House/index`
+      })
+    } else if (Url === 'repair') {
+      wx.navigateTo({
+        url: `/pages/repair/repair`
+      })
+    }
   }
 })

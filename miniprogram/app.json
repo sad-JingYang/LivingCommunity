@@ -11,7 +11,9 @@
     "pages/NewCommunity/index",
     "pages/community/building/building",
     "pages/community/room/room",
-    "pages/community/NewRoom/NewRoom"
+    "pages/community/NewRoom/NewRoom",
+    "pages/repair/repair",
+    "pages/addRepaire/index"
   ],
   "window": {},
   "rendererOptions": {

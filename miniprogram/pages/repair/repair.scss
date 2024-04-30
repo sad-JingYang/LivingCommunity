@@ -1,0 +1,83 @@
+/* pages/repair/repair.wxss */
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-sizing: border-box;
+
+  .head-rr {
+    font-size: 24rpx;
+    color: #979797;
+  }
+
+  .RepairCard {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: rgb(252, 246, 246);
+    border-radius: 10px;
+
+    .rr-name {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .status {
+        font-size: 24rpx;
+        padding: 10rpx 20rpx;
+        border-radius: 10rpx;
+      }
+
+      .cancel {
+        color: #979797;
+        background-color: #F2F2F6;
+      }
+
+      .review {
+        color: #2D9CDB;
+        background-color: #E5F0FB;
+      }
+
+      .pass {
+        color: #27AE60;
+        background-color: #EBF8F0;
+      }
+
+      .fail {
+        color: #DEAB48;
+        background-color: #FCF5E9;
+      }
+    }
+
+    .Item {
+      view {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+      }
+    }
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 160rpx;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    icon {
+      line-height: 50rpx;
+      font-size: 38rpx;
+      color: #5AA2CE;
+    }
+  }
+}

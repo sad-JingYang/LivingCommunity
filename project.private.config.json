@@ -9,8 +9,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/NewCommunity/index",
-          "pathName": "pages/NewCommunity/index",
+          "name": "pages/addRepaire/index",
+          "pathName": "pages/addRepaire/index",
           "query": "",
           "launchMode": "default",
           "scene": null

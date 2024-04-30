@@ -1,0 +1,31 @@
+<!--pages/repair/repair.wxml-->
+<text class="head-rr">我的报修</text>
+<!-- 报修卡 -->
+<view class="RepairCard" wx:for="{{repairList}}" wx:key="index">
+  <view class="rr-name">
+    <view>{{item.houseInfo}}</view>
+    <view class="status review" wx:if="{{item.status===1}}">受理中</view>
+    <view class="status pass" wx:if="{{item.status===2}}">上门中</view>
+    <view class="status fail" wx:if="{{item.status===3}}">已完成</view>
+    <view class="status cancel" wx:if="{{item.status===0}}">已取消</view>
+  </view>
+  <view class="Item">
+    <view>
+      <text>报修项目</text>
+      <text>{{item.repairItemName}}</text>
+    </view>
+    <view>
+      <text>预约时间</text>
+      <text>{{item.appointment}}</text>
+    </view>
+    <view>
+      <text>电话号码</text>
+      <text>{{item.mobile}}</text>
+    </view>
+  </view>
+</view>
+<!-- 在线报修 -->
+<view class="footer" catch:tap="addRepair" wx:if="{{ repairList.length!==0 }}">
+  <van-icon name="chat-o" color="#ee0a24" />
+  <view class="text">在线报修</view>
+</view>
