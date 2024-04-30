@@ -1,0 +1,12 @@
+<!--pages/code/code.wxml-->
+<view class="time">
+  <view>{{ time }}</view>
+  <text>通行证有效时间</text>
+</view>
+<view class="img">
+  <image src="../../assets/code.png" mode="widthFix" />
+</view>
+<view class="text">
+  <view>{{codeData.houseInfo}}</view>
+  <text>将此二维码分享给访客，访客扫码即可开门</text>
+</view>

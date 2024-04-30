@@ -1,0 +1,6 @@
+<view class="tab">
+  <image src="../../assets/null.png" mode="widthFix" />
+  <view class="text">
+    您还没有{{ text }}，请点击<text catch:tap="add">添加</text>
+  </view>
+</view>

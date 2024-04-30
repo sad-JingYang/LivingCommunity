@@ -1,0 +1,23 @@
+<my-null text="访客记录" bindadd="add" wx:if="{{ housesList.length===0 }}"></my-null>
+<scroll-view wx:if="{{ housesList.length!==0 }}" class="content" scroll-y="true" show-scrollbar="false" enhanced="true">
+  <view class="header">我的访客</view>
+  <view class="card" data-id="{{ item.id }}" data-status="{{ item.status }}" catch:tap="visitor" wx:for="{{ housesList }}" wx:key="id">
+    <view class="type title">
+      <view class="point">{{ item.houseInfo }}</view>
+      <view class="status cancel" wx:if="{{ item.status === 0 }}">已失效</view>
+      <view class="status pass" wx:if="{{ item.status === 1 }}">生效中</view>
+    </view>
+    <view class="type tab">
+      <view class="name">访客姓名</view>
+      <view class="val">{{ item.name }}{{item.room}}</view>
+    </view>
+    <view class="type tab">
+      <view class="name">手机号码</view>
+      <view class="val">{{ item.mobile }}</view>
+    </view>
+    <view class="type tab">
+      <view class="name">访问日期</view>
+      <view class="val">{{ item.visitDate }}</view>
+    </view>
+  </view>
+</scroll-view>

@@ -13,7 +13,9 @@
     "pages/community/room/room",
     "pages/community/NewRoom/NewRoom",
     "pages/repair/repair",
-    "pages/addRepaire/index"
+    "pages/addRepaire/index",
+    "pages/visitorRecords/index",
+    "pages/code/code"
   ],
   "window": {},
   "rendererOptions": {

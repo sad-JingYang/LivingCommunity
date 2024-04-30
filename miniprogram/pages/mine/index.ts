@@ -63,6 +63,10 @@ Page({
       wx.navigateTo({
         url: `/pages/repair/repair`
       })
+    } else if (Url === 'visitor') {
+      wx.navigateTo({
+        url: `/pages/repair/repair`
+      })
     }
   }
 })

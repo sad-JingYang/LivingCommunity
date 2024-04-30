@@ -28,6 +28,10 @@ Page({
       wx.navigateTo({
         url: '/pages/Visitor/index'
       })
+    } else if (UrlName === 'repair') {
+      wx.navigateTo({
+        url: '/pages/addRepaire/index'
+      })
     }
   }
 })

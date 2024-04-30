@@ -9,8 +9,15 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/addRepaire/index",
-          "pathName": "pages/addRepaire/index",
+          "name": "pages/code/code",
+          "pathName": "pages/code/code",
+          "query": "id=7022353365504000",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/visitorRecords/index",
+          "pathName": "pages/visitorRecords/index",
           "query": "",
           "launchMode": "default",
           "scene": null

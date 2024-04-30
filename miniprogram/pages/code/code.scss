@@ -1,0 +1,35 @@
+.time {
+  padding: 100rpx 0 30rpx;
+  text-align: center;
+
+  view {
+    color: #CC655E;
+    font-size: 50rpx;
+  }
+
+  text {
+    font-size: 24rpx;
+  }
+}
+
+.img {
+  padding-bottom: 30rpx;
+  text-align: center;
+
+  image {
+    width: 380rpx;
+  }
+}
+
+.text {
+  text-align: center;
+
+  view {
+    font-size: 34rpx;
+  }
+
+  text {
+    font-size: 28rpx;
+    color: #686868;
+  }
+}

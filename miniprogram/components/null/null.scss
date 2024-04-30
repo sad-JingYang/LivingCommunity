@@ -1,0 +1,23 @@
+.tab {
+  margin: 30rpx;
+  padding: 40rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  image {
+    width: 200rpx;
+  }
+  .text {
+    padding: 20rpx 0;
+    color: #C3C3C5;
+    font-size: 28rpx;
+    text {
+      margin-left: 10rpx;
+      color: #2D9CDB;
+    }
+  }
+}

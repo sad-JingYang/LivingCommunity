@@ -34,7 +34,7 @@
         <van-icon name="arrow" color="#ccc" />
       </view>
     </view>
-    <view class="bottom-Item">
+    <view class="bottom-Item" bind:tap="GoPage" data-bt="visitor">
       <view class="Item-left">
         <image src="../../assets/visitor.png" />
         <text>访客记录</text>

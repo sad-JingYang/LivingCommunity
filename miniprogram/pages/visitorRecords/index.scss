@@ -1,0 +1,80 @@
+/* pages/visitorRecords/index.wxss */
+.content,
+page {
+  height: 100%;
+}
+
+.content {
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  padding: 20rpx 30rpx 0;
+  color: #979797;
+  font-size: 24rpx;
+}
+
+.card {
+  margin-top: 20rpx;
+  padding: 0 30rpx;
+  background-color: #fff;
+
+  .type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 0;
+  }
+
+  .title {
+    border-bottom: 1px solid #eee;
+
+    .point {
+      font-weight: 500;
+      font-size: 32rpx;
+    }
+
+    .status {
+      font-size: 24rpx;
+      padding: 10rpx 20rpx;
+      border-radius: 10rpx;
+    }
+
+    .cancel {
+      color: #979797;
+      background-color: #F2F2F6;
+    }
+
+    .review {
+      color: #2D9CDB;
+      background-color: #E5F0FB;
+    }
+
+    .pass {
+      color: #27AE60;
+      background-color: #EBF8F0;
+    }
+
+    .fail {
+      color: #EB5757;
+      background-color: #FCF2ED;
+    }
+  }
+
+  .tab {
+    font-size: 28rpx;
+
+    .name {
+      color: #C3C3C5;
+    }
+
+    .val {
+      color: #686868;
+    }
+  }
+}
