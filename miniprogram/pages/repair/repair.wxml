@@ -1,7 +1,7 @@
 <!--pages/repair/repair.wxml-->
 <text class="head-rr">我的报修</text>
 <!-- 报修卡 -->
-<view class="RepairCard" wx:for="{{repairList}}" wx:key="index">
+<view class="RepairCard" data-id="{{ item.id }}" catch:tap="repair" wx:for="{{repairList}}" wx:key="index">
   <view class="rr-name">
     <view>{{item.houseInfo}}</view>
     <view class="status review" wx:if="{{item.status===1}}">受理中</view>

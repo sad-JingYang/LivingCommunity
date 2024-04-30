@@ -26,10 +26,11 @@ Page({
   onShow() {
     this.getRepairList();
   },
-  goDetail(ev) {
-    /*     wx.navigateTo({
-          url: "/repair_pkg/pages/detail/index?id=" + ev.mark.id,
-        }); */
+  repair(e: Object) {
+    wx.setStorageSync('repair', e.currentTarget.dataset.id)
+    wx.navigateTo({
+      url: "/pages/addRepaire/index"
+    })
   },
   async getRepairList() {
     // 调用接口获取维修列表
